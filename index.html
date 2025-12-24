@@ -1,1 +1,53 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Horizontal</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #3a5a40;
+      font-family: Arial, sans-serif;
+    }
+    h1 { margin-bottom: 10px; color: white; }
+    .button-row {
+      display: flex;
+      gap: 20px;
+    }
+    h3 { margin-bottom: 50px; color: white; }
+    .button-row {
+      display: flex;
+      gap: 20px;
+    }
+    button {
+      padding: 15px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: white;
+      color: #3a5a40;
+      margin-bottom: 20px;
+    }
+    button:hover { background: black; color: white; }
+  </style>
+</head>
+  
+  
+<body>
+  <h1>My Python Journal</h1>
+  <h3>My guide to using Python</h3>
+  <div class="button-row">
+    <button onclick="location.href='terminology.html'">Terminology</button>
+    <button onclick="location.href='algorithms.html'">Algorithms</button>
+    <button onclick="location.href='frameworks.html'">Frameworks</button>
+  </div>
+  <h3>Created by Johanz</h3>
+</body>
+</html>
