@@ -17,13 +17,14 @@
     </script>
 </head>
 <body>
-    <form>
+    <form onsubmit="return checkPswd();">
+
         <label for="pswd">Enter your password: </label>
-        
-        <input type="password" id="pswd" required> 
+
+        <input type="password" id="pswd" required>
 
         <input type="submit" value="Submit">
-        <input type="button" value="Submit" onclick="checkPswd();" />
+
     </form>
 </body>
 </html>
