@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple Password Page</title>
+    <title>Password</title>
     <script type="text/javascript">
         function checkPswd() {
-            // The correct password is hardcoded here (insecure).
+
             var confirmPassword = "finley"; 
             var password = document.getElementById("pswd").value;
             
             if (password === confirmPassword) {
-                // Redirect to a welcome page on success
                 window.location.assign("main.html"); 
             } else {
-                // Show an alert on failure
                 alert("Passwords do not match. Please try again."); 
             }
         }
@@ -21,9 +19,10 @@
 <body>
     <form>
         <label for="pswd">Enter your password: </label>
-        <!-- The type="password" attribute masks the input characters -->
+        
         <input type="password" id="pswd" required> 
-        <!-- The onclick event triggers the JavaScript function -->
+
+        <input type="submit" value="Submit">
         <input type="button" value="Submit" onclick="checkPswd();" />
     </form>
 </body>
