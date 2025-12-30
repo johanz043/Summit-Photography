@@ -1,64 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Character encoding -->
   <meta charset="UTF-8">
+
+  <!-- Responsive scaling for mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Browser tab title -->
   <title>Home - Horizontal</title>
-    <style>
-    /* Reset default spacing */
+
+  <style>
+    /* Remove default browser spacing */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      overflow: hidden; /* Prevent scrollbars */
+      overflow: hidden;
     }
 
-    /* Fullscreen video background */
+    /* Fullscreen background video */
     .video-bg {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover; /* Fill screen without distortion */
-      z-index: -1; /* Push video behind content */
+      object-fit: cover;
+      z-index: -2;
     }
 
-    /* Page content layout */
-    .content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      color: white;
-      text-align: center;
-    }
-
-    h1 { margin-bottom: 10px; }
-    h3 { margin-bottom: 50px; }
-
-    .button-row {
-      display: flex;
-      gap: 20px;
-    }
-
-    button {
-      padding: 15px 25px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      background: white;
-      color: #3a5a40;
-      margin-bottom: 20px;
-    }
-
-    button:hover {
-      background: black;
-      color: white;
-    }
-
-    /* Optional dark overlay for readability */
+    /* Dark overlay for text readability */
     .overlay {
       position: fixed;
       top: 0;
@@ -68,15 +39,66 @@
       background: rgba(0, 0, 0, 0.35);
       z-index: -1;
     }
+
+    /* Main content layout */
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      color: white;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      margin-bottom: 50px;
+    }
+
+    /* Button container */
+    .button-row {
+      display: flex;
+      gap: 20px;
+    }
+
+    /* Buttons */
+    button {
+      padding: 15px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: white;
+      color: #3a5a40;
+      margin-bottom: 20px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: black;
+      color: white;
+    }
+
+    /* Accessibility: respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .video-bg {
+        display: none;
+      }
+    }
   </style>
 </head>
-  
-  
+
 <body>
 
-  <!-- Video background -->
+  <!-- Cloudinary background video -->
   <video class="video-bg" autoplay muted loop playsinline>
-    <source src="background.mp4" type="video/mp4">
+    <source
+      src="https://res.cloudinary.com/dxuhr8ydj/video/upload/f_auto,q_auto,w_1280/202512301222_aeb8sh.mp4"
+      type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
@@ -90,9 +112,16 @@
 
     <div class="button-row">
       <button onclick="location.href='terminology.html'">Instagram</button>
-      <button onclick="location.href='algorithms.html'">Album Showcase</button>
+      <button onclick="location.href='algorithms.html'">Albums</button>
       <button onclick="location.href='frameworks.html'">Contact Me</button>
     </div>
+
+    <h3>Brought to you by Finley Darley</h3>
+  </div>
+
+</body>
+</html>
+
 
     <h3>Brought to you by Finley Darley</h3>
   </div>
