@@ -28,11 +28,14 @@
       padding: 20px 40px 60px;
     }
 
-    /* Image container */
+    /* Clickable image container */
     .gallery-item {
       position: relative;
       overflow: hidden;
       cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: block;
     }
 
     /* Images */
@@ -41,6 +44,7 @@
       height: 100%;
       object-fit: cover;
       transition: transform 0.5s ease;
+      display: block;
     }
 
     /* Hover zoom */
@@ -48,7 +52,7 @@
       transform: scale(1.1);
     }
 
-    /* Optional overlay text */
+    /* Overlay text */
     .overlay {
       position: absolute;
       bottom: 0;
@@ -86,27 +90,28 @@
   <a href="summit.html" class="back">← Back to Home</a>
 
   <div class="gallery">
-    <div class="gallery-item">
-      <img src="pics/DJI_20250906122515_0233_D.JPG" alt="Drone Shot">
-      <div class="overlay">J's estate</div>
-    </div>
 
-    <div class="gallery-item">
+    <a href="estate.html" class="gallery-item">
+      <img src="pics/DJI_20250906122515_0233_D.JPG" alt="Drone Shot">
+      <div class="overlay">J's Estate</div>
+    </a>
+
+    <a href="example1.html" class="gallery-item">
       <img src="pics/DJI_20250906122521_0234_D.JPG" alt="Drone Shot">
       <div class="overlay">Example</div>
-    </div>
+    </a>
 
-    <div class="gallery-item">
+    <a href="example2.html" class="gallery-item">
       <img src="pics/DJI_20250906123032_0235_D.JPG" alt="Drone Shot">
       <div class="overlay">Example</div>
-    </div>
+    </a>
 
-    <div class="gallery-item">
+    <a href="example3.html" class="gallery-item">
       <img src="pics/DJI_20250906123048_0236_D.JPG" alt="Drone Shot">
       <div class="overlay">Example</div>
-    </div>
+    </a>
+
   </div>
 
 </body>
 </html>
-
