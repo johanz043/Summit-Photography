@@ -1,31 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Password</title>
-    <script type="text/javascript">
-        function checkPswd() {
+  <!-- Character encoding -->
+  <meta charset="UTF-8">
 
-            var confirmPassword = "finley"; 
-            var password = document.getElementById("pswd").value;
-            
-            if (password === confirmPassword) {
-                window.location.assign("summit.html"); 
-            } else {
-                alert("Passwords do not match. Please try again."); 
-            }
-            return false;
-        }
-    </script>
+  <!-- Responsive scaling for mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Browser tab title -->
+  <title>Home - Horizontal</title>
+
+  <style>
+    /* Remove default browser spacing */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    /* Fullscreen background video */
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    /* Dark overlay for text readability */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.35);
+      z-index: -1;
+    }
+
+    /* Main content layout */
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      color: white;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      margin-bottom: 50px;
+    }
+
+    /* Button container */
+    .button-row {
+      display: flex;
+      gap: 20px;
+    }
+
+    /* Buttons */
+    button {
+      padding: 15px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: white;
+      color: #3a5a40;
+      margin-bottom: 20px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: black;
+      color: white;
+    }
+
+    /* Accessibility: respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .video-bg {
+        display: none;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <form onsubmit="return checkPswd();">
 
-        <label for="pswd">Enter your password: </label>
+  <!-- Cloudinary background video -->
+  <video class="video-bg" autoplay muted loop playsinline>
+    <source
+      src="https://res.cloudinary.com/dxuhr8ydj/video/upload/v1767594340/202601051145_v5veem.mp4"
+      type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
-        <input type="password" id="pswd" required>
+  <!-- Dark overlay -->
+  <div class="overlay"></div>
 
-        <input type="submit" value="Submit">
+  <!-- Page content -->
+  <div class="content">
+    <h1>Summit Photography</h1>
+    <h3>Drone Photography and Videography</h3>
 
-    </form>
+    <div class="button-row">
+      <button onclick="window.open('https://www.instagram.com/snapsh0t_1705')">Instagram</button>
+      <button onclick="location.href='album.html'">Albums</button>
+      <button onclick="location.href='frameworks.html'">Contact Me</button>
+    </div>
+
+    <h3>Photos by Finley Darley</h3>
+  </div>
+
+</body>
+</html>
+
+
+    <h3>Brought to you by Finley Darley</h3>
+  </div>
+
 </body>
 </html>
