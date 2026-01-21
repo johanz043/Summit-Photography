@@ -1,1 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Albums</title>
 
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: white;
+    }
+
+    /* Page title */
+    h1 {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 2.5rem;
+    }
+
+    /* Gallery grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px 40px 60px;
+    }
+
+    /* Clickable image container */
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    /* Images */
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      display: block;
+    }
+
+    /* Hover zoom */
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Overlay text */
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      font-size: 1rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover .overlay {
+      opacity: 1;
+    }
+
+    /* Back button */
+    .back {
+      display: block;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #aaa;
+      text-decoration: none;
+    }
+
+    .back:hover {
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Albums</h1>
+
+  <a href="summit.html" class="back">← Back to Home</a>
+
+  <div class="gallery">
+
+    <a href="Album-Files/Jayden-Estate.html" class="gallery-item">
+      <img src="pics/DJI_20250906122515_0233_D.JPG" alt="Drone Shot">
+      <div class="overlay">J's Estate</div>
+    </a>
+    
+    <!-- 
+    <a href="example1.html" class="gallery-item">
+      <img src="pics/DJI_20250906122521_0234_D.JPG" alt="Drone Shot">
+      <div class="overlay">Example</div>
+    </a>
+    -->
+
+  </div>
+
+</body>
+</html>
