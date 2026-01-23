@@ -1,0 +1,191 @@
+/* ========== General ========== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Fade-up animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== Titles & Text ========== */
+h1 {
+  text-align: center;
+  margin: 0 0 10px;
+  font-size: 2.5rem;
+  opacity: 0;
+  animation: fadeUp 1s ease-out forwards;
+}
+
+p.description {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+  color: #ccc;
+  opacity: 0;
+  animation: fadeUp 1s ease-out forwards;
+}
+
+/* ========== Buttons & Back Links ========== */
+a.back {
+  display: block;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #aaa;
+  font-size: 1rem;
+  opacity: 0;
+  animation: fadeUp 1s ease-out forwards;
+}
+
+a.back:hover {
+  color: white;
+}
+
+button {
+  padding: 15px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: white;
+  color: #3a5a40;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: black;
+  color: white;
+}
+
+/* ========== Homepage Layout ========== */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.content > * {
+  opacity: 0;
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.content > *:nth-child(1) { animation-delay: 0.2s; }
+.content > *:nth-child(2) { animation-delay: 0.4s; }
+.content > *:nth-child(3) { animation-delay: 0.6s; }
+.content > *:nth-child(4) { animation-delay: 0.8s; }
+
+/* Video background */
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.35);
+  z-index: -1;
+}
+
+/* ========== Albums Page ========== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px 40px 60px;
+  opacity: 0;
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay-text {
+  opacity: 1;
+}
+
+/* ========== Album Photos Page ========== */
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px 40px 60px;
+  opacity: 0;
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.photos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+.photos a:hover img {
+  transform: scale(1.05);
+}
+
+/* ========== Accessibility ========== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
