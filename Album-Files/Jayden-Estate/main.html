@@ -1,62 +1,90 @@
+<!DOCTYPE html>
 <html lang="en">
-    <body style="background-color: rgb(82, 82, 82);"></body>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>igotalotofphotos</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jayden's Estate</title>
 
-        <style>
-            a.link {
-                text-decoration: none;
-                color: #0077cc;
-            }
-            a.link:hover {
-                text-decoration: underline;
-            }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f0f; /* same as previous page */
+      color: white;
+    }
 
-            
-            .Photos {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr); 
-                gap: 20px; 
-                padding: 20px;
-            }
+    /* Title section */
+    .title {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
 
-            .Photos img {
-                width: 100%;
-                height: auto;
-                border-radius: 8px;
-                object-fit: cover;
-            }
+    .title h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
 
-            .Title p {
-                font-size: 25px; 
-            }
+    .title p {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
 
-            .Title h1 {
-                font-size: 30px; 
-            }
+    /* Photo grid */
+    .photos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px 40px 60px;
+    }
 
-        </style>
+    .photos img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.4s ease;
+      display: block;
+    }
 
-    </head>
+    .photos a:hover img {
+      transform: scale(1.05);
+    }
 
+    /* Back button */
+    .back {
+      display: block;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #aaa;
+      text-decoration: none;
+      font-size: 1rem;
+    }
 
-        <div class="Title">
-                <h1>Jayden's Estate</h1>
-                <p>Bird eye views of Jayden's estate </p>
-            </body>
-        </div>
+    .back:hover {
+      color: white;
+    }
+  </style>
+</head>
 
-        <div class="Photos">
-            <a href="33.JPG" download><img src="33.JPG" alt="Photo 1"></a>
-            <a href="40.JPG" download><img src="40.JPG" alt="Photo 2"></a>
-            <a href="42.JPG" download><img src="42.JPG" alt="Photo 3"></a>
-            <a href="47.JPG" download><img src="47.JPG" alt="Photo 4"></a>
-            <a href="48.JPG" download><img src="48.JPG" alt="Photo 5"></a>
-            <a href="51.JPG" download><img src="51.JPG" alt="Photo 6"></a>
-            <a href="52.JPG" download><img src="52.JPG" alt="Photo 7"></a>
-            <a href="53.JPG" download><img src="53.JPG" alt="Photo 8"></a>
-        </div>
+<body>
+
+  <div class="title">
+    <h1>Jayden's Estate</h1>
+    <p>Bird’s-eye views of Jayden’s estate</p>
+  </div>
+
+  <div class="photos">
+    <a href="33.JPG" download><img src="33.JPG" alt="Photo 1"></a>
+    <a href="40.JPG" download><img src="40.JPG" alt="Photo 2"></a>
+    <a href="42.JPG" download><img src="42.JPG" alt="Photo 3"></a>
+    <a href="47.JPG" download><img src="47.JPG" alt="Photo 4"></a>
+    <a href="48.JPG" download><img src="48.JPG" alt="Photo 5"></a>
+    <a href="51.JPG" download><img src="51.JPG" alt="Photo 6"></a>
+    <a href="52.JPG" download><img src="52.JPG" alt="Photo 7"></a>
+    <a href="53.JPG" download><img src="53.JPG" alt="Photo 8"></a>
+  </div>
+
+  <a href="album.html" class="back">← Back to Albums</a>
+
+</body>
 </html>
