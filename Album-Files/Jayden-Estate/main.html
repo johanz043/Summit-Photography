@@ -9,8 +9,20 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0f0f0f; /* same as previous page */
+      background: #0f0f0f;
       color: white;
+    }
+
+    /* Fade-up animation */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* Title section */
@@ -22,11 +34,17 @@
     .title h1 {
       font-size: 2.5rem;
       margin-bottom: 10px;
+      opacity: 0;
+      animation: fadeUp 1s ease-out forwards;
+      animation-delay: 0.2s;
     }
 
     .title p {
       font-size: 1.1rem;
       color: #ccc;
+      opacity: 0;
+      animation: fadeUp 1s ease-out forwards;
+      animation-delay: 0.4s;
     }
 
     /* Photo grid */
@@ -35,6 +53,9 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
       padding: 20px 40px 60px;
+      opacity: 0;
+      animation: fadeUp 1s ease-out forwards;
+      animation-delay: 0.6s;
     }
 
     .photos img {
@@ -58,10 +79,25 @@
       color: #aaa;
       text-decoration: none;
       font-size: 1rem;
+      opacity: 0;
+      animation: fadeUp 1s ease-out forwards;
+      animation-delay: 0.8s;
     }
 
     .back:hover {
       color: white;
+    }
+
+    /* Accessibility: reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .title h1,
+      .title p,
+      .photos,
+      .back {
+        animation: none;
+        opacity: 1;
+        transform: none;
+      }
     }
   </style>
 </head>
@@ -84,7 +120,8 @@
     <a href="53.JPG" download><img src="53.JPG" alt="Photo 8"></a>
   </div>
 
-  <a href="album.html" class="back">← Back to Albums</a>
+  <a href="../../album.html" class="back">← Back to Albums</a>
 
 </body>
 </html>
+
