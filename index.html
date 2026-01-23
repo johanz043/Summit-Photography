@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Browser tab title -->
-  <title>Home - Horizontal</title>
+  <title>Home - Summit Photography</title>
 
   <style>
     /* Remove default browser spacing */
@@ -40,6 +40,18 @@
       z-index: -1;
     }
 
+    /* Fade-in animation */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     /* Main content layout */
     .content {
       display: flex;
@@ -51,18 +63,31 @@
       color: white;
     }
 
+    /* Stagger animation for children */
+    .content > * {
+      opacity: 0;
+      animation: fadeUp 1s ease-out forwards;
+    }
+
+    .content > *:nth-child(1) { animation-delay: 0.2s; }
+    .content > *:nth-child(2) { animation-delay: 0.4s; }
+    .content > *:nth-child(3) { animation-delay: 0.6s; }
+    .content > *:nth-child(4) { animation-delay: 0.8s; }
+
     h1 {
       margin-bottom: 10px;
     }
 
     h3 {
-      margin-bottom: 50px;
+      margin-bottom: 40px;
+      font-weight: normal;
     }
 
     /* Button container */
     .button-row {
       display: flex;
       gap: 20px;
+      margin-bottom: 30px;
     }
 
     /* Buttons */
@@ -74,7 +99,6 @@
       cursor: pointer;
       background: white;
       color: #3a5a40;
-      margin-bottom: 20px;
       transition: 0.3s;
     }
 
@@ -85,6 +109,12 @@
 
     /* Accessibility: respect reduced motion */
     @media (prefers-reduced-motion: reduce) {
+      .content > * {
+        animation: none;
+        opacity: 1;
+        transform: none;
+      }
+
       .video-bg {
         display: none;
       }
@@ -94,7 +124,7 @@
 
 <body>
 
-  <!-- Cloudinary background video -->
+  <!-- Background video -->
   <video class="video-bg" autoplay muted loop playsinline>
     <source
       src="https://res.cloudinary.com/dxuhr8ydj/video/upload/v1767594340/202601051145_v5veem.mp4"
@@ -122,9 +152,3 @@
 </body>
 </html>
 
-
-    <h3>Brought to you by Finley Darley</h3>
-  </div>
-
-</body>
-</html>
