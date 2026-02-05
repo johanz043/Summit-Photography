@@ -221,3 +221,39 @@ button:hover {
     transform: rotate(360deg);
   }
 }
+
+
+/* ===== Contact Page ===== */
+.contact-page {
+  background-color: #000;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-container h1 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.contact-email a {
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  opacity: 0.9;
+  letter-spacing: 1px;
+}
+
+.contact-email a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
