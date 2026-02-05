@@ -258,4 +258,12 @@ button:hover {
   text-decoration: underline;
 }
 
+.contact-page .back {
+    margin-top: 100px; 
+    margin-bottom: 80px;  
+    color: white;
+    text-decoration: none;
+    opacity: 0.7;
+  }
+
 
